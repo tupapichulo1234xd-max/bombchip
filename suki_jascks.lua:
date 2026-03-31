@@ -1,0 +1,48 @@
+-- ==============================================
+-- SUKI HACKS | VERSIÓN CON LINK VISIBLE ARRIBA DEL MENÚ
+-- LINK MANUAL + COPY LINK FUNCIONAL
+-- NUEVAS FUNCIONES: INVISIBILIDAD Y INMORTALIDAD
+-- ==============================================
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local CoreGui = game:GetService("CoreGui")
+local player = Players.LocalPlayer
+
+local boostActive = false
+local currentSpeed = 50
+local invisibilidadActive = false
+local inmortalidadActive = false
+local KEY_CORRECTA = "free1234"
+local accesoConcedido = false
+local LINK_TIKTOK_EXACTO = "https://www.tiktok.com/@hacker_podererosa"
+
+-- Evitar duplicados
+if CoreGui:FindFirstChild("SukiHacks") then
+    CoreGui.SukiHacks:Destroy()
+    task.wait(0.5)
+end
+
+-- Interfaz principal
+local sg = Instance.new("ScreenGui")
+sg.Name = "SukiHacks"
+sg.Parent = CoreGui
+sg.ResetOnSpawn = false
+sg.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- PANEL DE KEY
+local panelKey = Instance.new("Frame")
+panelKey.Parent = sg
+panelKey.Size = UDim2.new(0, 280, 0, 150)
+panelKey.Position = UDim2.new(0.5, -140, 0.3, 0)
+panelKey.BackgroundColor3 = Color3.fromRGB(20, 20, 40)
+panelKey.Active = true
+Instance.new("UICorner", panelKey)
+
+-- Titulo Key
+local lblKeyTitulo = Instance.new("TextLabel")
+lblKeyTitulo.Parent = panelKey
+lblKeyTitulo.Size = UDim2.new(1, 0, 0, 35)
+lblKeyTitulo.BackgroundColor3 = Color3.fromRGB(150, 0, 255)
+lblKeyTitulo.Text = "INGRESA LA KEY
+
